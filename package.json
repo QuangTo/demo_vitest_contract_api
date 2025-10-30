@@ -2,13 +2,21 @@
   "name": "api-lab",
   "version": "1.0.0",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx tsx /src/server/index.ts",
+    "test:unit": "vitest run"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.1.0",
+    "typescript": "^5.9.3"
+  },
+  "devDependencies": {
+    "@pact-foundation/pact": "^16.0.2",
+    "@types/express": "^5.0.5",
+    "vitest": "^4.0.5"
   }
 }
