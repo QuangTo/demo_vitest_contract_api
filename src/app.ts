@@ -8,7 +8,7 @@ import express from 'express'
   })
 
   app.listen(port, ()=>{
-    console.log('buy');
+    console.log('start listen');
     
   })
 
