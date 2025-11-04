@@ -1,4 +1,4 @@
-import { User, UserRepository } from "../repositories/user-repo";
+import type { User, UserRepository } from "../repositories/user-repo";
 
 export class UserService {
   private repo: UserRepository;
@@ -8,6 +8,6 @@ export class UserService {
   }
 
   async getUserById(id: number): Promise<User | null> {
-    return this.repo.findById(id);
+    return this.repo.getUserById(id);
   }
 }

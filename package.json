@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "start": "npx tsx src/index.ts",
-    "test:unit": "npx vitest run"
+    "test:all": "npx vitest run",
+    "test:unit": "npx vitest tests/unit/user.test.ts",
+    "test:contract": "npx vitest run tests/contract/user-contract.test.ts"
   },
   "author": "",
   "license": "ISC",

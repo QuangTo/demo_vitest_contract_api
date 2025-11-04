@@ -1,0 +1,57 @@
+{
+  "consumer": {
+    "name": "userWebApp"
+  },
+  "interactions": [
+    {
+      "description": "a request for id 1",
+      "providerStates": [
+        {
+          "name": "user exist with id =1"
+        }
+      ],
+      "request": {
+        "method": "GET",
+        "path": "/users/1"
+      },
+      "response": {
+        "body": {
+          "age": 30,
+          "id": 1,
+          "name": "James QA"
+        },
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "matchingRules": {
+          "body": {
+            "$": {
+              "combine": "AND",
+              "matchers": [
+                {
+                  "match": "type"
+                }
+              ]
+            }
+          }
+        },
+        "status": 200
+      }
+    }
+  ],
+  "metadata": {
+    "pact-js": {
+      "version": "16.0.2"
+    },
+    "pactRust": {
+      "ffi": "0.4.28",
+      "models": "1.3.5"
+    },
+    "pactSpecification": {
+      "version": "3.0.0"
+    }
+  },
+  "provider": {
+    "name": "apiUser"
+  }
+}

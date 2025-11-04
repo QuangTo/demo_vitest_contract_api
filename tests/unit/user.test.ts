@@ -2,11 +2,11 @@ import { expect, test, vi } from "vitest";
 import { UserService } from "../../src/services/user-service";
 import { User, UserRepository } from "../../src/repositories/user-repo";
 
-test("GET /users/ should return data successfull", async () => {
+test("should GET /users/ data successfull", async () => {
   //mock data
   const mockUser: User = { id: 1, name: "James QA", age: 30 };
   const mockRepo: UserRepository = {
-    findById: vi.fn().mockResolvedValue(mockUser),
+    getUserById: vi.fn().mockResolvedValue(mockUser),
   };
   const mockUserService = new UserService(mockRepo);
   // test

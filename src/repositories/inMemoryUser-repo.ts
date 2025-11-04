@@ -5,7 +5,7 @@ import { User, UserRepository } from "./user-repo";
 const mockDB: User[] = [{ id: 1, name: "James QA", age: 30 }];
 
 export class InMemoryUserRepository implements UserRepository {
-  async findById(id: number): Promise<User | null> {
+  async getUserById(id: number): Promise<User | null> {
     return mockDB.find((u) => u.id === id) || null;
   }
 }

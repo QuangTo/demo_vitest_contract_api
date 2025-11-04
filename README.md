@@ -18,8 +18,23 @@ npm start
 http://localhost:3000/users/1
 ```
 
+All test
+
+```
+npm run test:all
+```
+
 Unit test with Vitest
 
 ```
 npm run test:unit
 ```
+
+Contract test with PactJS
+
+```
+npm run test:contract
+```
+
+Result
+![alt text](image.png)

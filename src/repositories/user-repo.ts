@@ -5,5 +5,5 @@ export interface User {
 }
 
 export interface UserRepository {
-  findById(id: number): Promise<User | null>;
+  getUserById(id: number): Promise<User | null>;
 }
