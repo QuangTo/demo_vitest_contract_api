@@ -35,6 +35,3 @@ Contract test with PactJS
 ```
 npm run test:contract
 ```
-
-Result
-![alt text](image.png)
